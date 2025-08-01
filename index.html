@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor</title>
+    <link rel="stylesheet" href="Estilo/style.css">
+</head>
+<body>
+    <header> <h1>Tradutor</h1>
+    <nav>
+        <ul>
+            <li><a href="#section1">Seção 1</a></li>
+            <li><a href="#section2">Seção 2</a></li>
+            <li><a href="#section3">Seção 3</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Bem vindo, o que você gostaria de traduzir?</h2>
+            <h4>A tradução somentee funciona para o inglês ;-;</h4>
+        <p>Digite logo abaixo!</p> <textarea name="texto" id="texto" oninput="atualizarTexto(this)"></textarea>
+        <br>
+        <button id="traduzir" onclick="traduzir()">Traduzir</button>
+        </div>
+        <div>
+            <h2>Resultado da tradução:</h2>
+            <p id="resultado"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Tradutor. Todos os direitos reservados.</p>
+    </footer>
+    <script src="Script/script.js"></script>
+</body>
+</html>
