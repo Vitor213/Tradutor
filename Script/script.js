@@ -1,7 +1,7 @@
-function atualizarTexto(campo){
+function atualizarTexto(campos){
     let res = document.getElementById('resultado')
     let campo = document.getElementById('texto')
-    campo.value = campo.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')
+    campos.value = campos.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '')
 }
 
 function traduzir() {

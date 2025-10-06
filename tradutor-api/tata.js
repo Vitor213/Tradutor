@@ -12,6 +12,8 @@ app.get('/traduzir', async (req, res) => {
         return res.status(400).json({ erro: 'Frase não fornecida' });
     }
 
+    console.log('Recebida frase para tradução:', frase); // <-- log antes da requisição
+
     try {
         const resposta = await axios.post('https://libretranslate.de/translate', {
             q: frase,
@@ -20,14 +22,22 @@ app.get('/traduzir', async (req, res) => {
             format: 'text'
         });
         console.log('DEBUG: Resposta da API externa:', resposta.data);
-        
-        res.json({
-            original: frase,
-            traducao: resposta.data.translatedText
-        });
 
+        if (resposta.data.translatedText) {
+            res.json({
+                original: frase,
+                traducao: resposta.data.translatedText
+            });
+        } else {
+            res.json({
+                original: frase,
+                traducao: null,
+                erro: 'Não foi possível obter a tradução',
+                resposta: resposta.data // Adiciona resposta da API externa para debug
+            });
+        }
     } catch (erro) {
-        console.error(erro);
+        console.error('Erro na requisição para a API externa:', erro); // <-- log detalhado
         res.status(500).json({ erro: 'Erro ao traduzir' });
     }
 });
