@@ -1,61 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: #357c38;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+.card {
+  border-radius: 12px;
+  background-color: #ffffff;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    background-color: #357c38;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.205);
-    margin-top: 10px;
-}
-nav ul a:hover {
-    color: #ffeb3b;
-}
-
-#texto{
-    width: 40%;
-    height: 60px;
-    font-size: 16px;
-    padding: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #357c38;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+#resultado {
+  font-size: 1rem;
+  white-space: pre-wrap;
 }
